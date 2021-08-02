@@ -43,6 +43,16 @@ const Footer = () => {
               https://www.facebook.com/rajtilak.pal.9
             </a>
           </p>
+          <p>
+            Medium:{" "}
+            <a
+              href="https://medium.com/@rajtilakls2510"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://medium.com/@rajtilakls2510
+            </a>
+          </p>
         </div>
         <div className="creation-container">
           <h3>Creation: </h3>

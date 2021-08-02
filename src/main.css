@@ -684,9 +684,8 @@ Projects
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  box-shadow: var(--shadow-2);
   border-radius: 20px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .single-project {
@@ -700,55 +699,61 @@ Projects
   height: 65vh;
   border: 2px solid var(--green);
   border-radius: 20px;
-  position: relative;
   cursor: pointer;
 }
 
-.img-after {
-  height: 100%;
-  width: 100%;
-  background: var(--image-overlay);
+.project-details {
   position: absolute;
-  left: 0;
+  width: 100%;
   top: 0;
+  border-radius: 20px;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  transition: var(--transition);
+}
+
+.project-align-left {
+  align-items: flex-start;
+}
+
+.project-align-right {
+  align-items: flex-end;
 }
 
 .project-details-left {
-  position: absolute;
   transform: translateX(-105%);
   opacity: 0;
-  transition: 0.4s ease all;
+  transition: 0.4s ease-in all;
 }
 .project-details-right {
   transform: translateX(105%);
-  position: absolute;
   opacity: 0;
-  transition: 0.4s ease all;
+  transition: 0.4s ease-in all;
+}
+.show-details {
+  background: var(--image-overlay);
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .project-title {
-  top: 5%;
   font-weight: 700;
+  margin: 0;
 }
-.project-domains {
-  top: 20%;
-}
-.project-desc {
-  top: 40%;
-}
+.project-domains,
+.project-desc,
 .project-github-btn {
-  top: 70%;
+  margin: 0;
 }
 .project-helper {
   position: absolute;
   right: 5%;
   bottom: 0%;
   margin: 0.2rem;
-}
-
-.show-details {
-  transform: translateX(0%);
-  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -758,7 +763,7 @@ Projects
   }
   .project-img {
     width: 35vw;
-    height: auto;
+    height: 35vh;
   }
 }
 
