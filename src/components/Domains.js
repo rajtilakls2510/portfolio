@@ -21,8 +21,8 @@ const Domains = () => {
   };
 
   return (
-    <section className="domains-section" id="work">
-      <h3>Domains that I have worked on:</h3>
+    <section className="domains-section">
+      <h3 id="work">Domains that I have worked on:</h3>
       <div className="underline"></div>
       <div className="domain-container">
         {domainData.map((domain, index) => {

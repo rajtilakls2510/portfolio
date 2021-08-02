@@ -3,9 +3,9 @@ import profileImg from "../images/profile_image.jpg";
 
 const Banner = () => {
   return (
-    <section className="banner" id="home">
+    <section className="banner">
       <div className="primary-info-container">
-        <div className="photo-column">
+        <div className="photo-column" id="home">
           <img src={profileImg} alt="" className="profile-img" />
         </div>
         <div className="info-column">

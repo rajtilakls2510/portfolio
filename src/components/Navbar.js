@@ -38,13 +38,16 @@ const Navbar = () => {
           >
             Work
           </Link>
-          <h4
-            href=""
+          <Link
+            to="blog"
+            smooth={true}
+            duration={300}
+            offset={-100}
             className="nav-link"
             onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Blog
-          </h4>
+          </Link>
           <h4
             href=""
             className="nav-link"

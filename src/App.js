@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Domains from "./components/Domains";
 import Projects from "./components/Projects";
+import BlogsEducation from "./components/BlogsContacts";
 // import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Banner />
         <Domains />
         <Projects />
+        <BlogsEducation />
       </main>
     </>
   );
