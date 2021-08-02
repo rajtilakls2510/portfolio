@@ -1,10 +1,12 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const SingleBlog = ({
-  title,
-  img,
+const SingleEducation = ({
+  instituteName,
+  degreeCourse,
   desc,
+  email,
+  website,
   visibilityClass,
   onPrevClick,
   onNextClick,
@@ -13,9 +15,13 @@ const SingleBlog = ({
 }) => {
   return (
     <article className={`blog ${visibilityClass}`}>
-      <h2>{title}</h2>
-      <img src={img} alt="Blog" className="blog-img" />
+      <h2>{instituteName}</h2>
+      <h5>{degreeCourse}</h5>
       <p>{desc}</p>
+      <p>Email : {email}</p>
+      <a href={website} target="_blank" className="word">
+        Website
+      </a>
       {prevBtnVisible && (
         <div
           className="btn blog-change-btn blog-prev-btn"
@@ -36,4 +42,4 @@ const SingleBlog = ({
   );
 };
 
-export default SingleBlog;
+export default SingleEducation;
