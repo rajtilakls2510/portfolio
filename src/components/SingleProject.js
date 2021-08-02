@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import backgroundImg from "../images/banner_background.jpg";
 
-const SingleProject = ({ title, domains, desc, github, detailsLeft }) => {
+const SingleProject = ({ title, domains, desc, img, github, detailsLeft }) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const textAlignSide = detailsLeft ? "start" : "end";
   const translateInitial = detailsLeft
@@ -24,7 +23,7 @@ const SingleProject = ({ title, domains, desc, github, detailsLeft }) => {
       // onMouseLeave={() => setIsDetailsOpen(false)}
     >
       <img
-        src={backgroundImg}
+        src={img}
         alt="Project"
         className="project-img"
         ref={projectImgRef}

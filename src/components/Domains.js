@@ -7,14 +7,12 @@ const Domains = () => {
 
   const handleNextClick = () => {
     setActiveDomain((prevState) => {
-      console.log(prevState);
       if (prevState + 1 < domainData.length) prevState = prevState + 1;
       return prevState;
     });
   };
   const handlePrevClick = () => {
     setActiveDomain((prevState) => {
-      console.log(prevState);
       if (prevState - 1 >= 0) prevState = prevState - 1;
       return prevState;
     });
