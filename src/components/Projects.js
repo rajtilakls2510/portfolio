@@ -1,6 +1,6 @@
 import React from "react";
-
 import SingleProject from "./SingleProject";
+import projectDetails from "../projectDetails";
 
 const Projects = () => {
   return (
@@ -9,10 +9,15 @@ const Projects = () => {
       <div className="underline"></div>
 
       <div className="project-container">
-        <SingleProject detailsLeft={true} />
-        <SingleProject detailsLeft={false} />
-        <SingleProject detailsLeft={true} />
-        <SingleProject detailsLeft={false} />
+        {projectDetails.map((project, index) => {
+          return (
+            <SingleProject
+              key={index}
+              {...project}
+              detailsLeft={index % 2 === 0}
+            />
+          );
+        })}
       </div>
     </section>
   );

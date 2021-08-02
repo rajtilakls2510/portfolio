@@ -83,11 +83,6 @@ body {
   color: var(--textColor);
 }
 
-p {
-  /* margin-bottom: 1.5rem; */
-  /* max-width: 40em; */
-}
-
 h1,
 h2,
 h3,
@@ -275,50 +270,21 @@ Project
   width: 150px;
 }
 
-.elevated-card {
-  margin: 2rem;
-  padding: 1rem;
-  background: var(--backgroundElevatedColor);
-  border-radius: 20px;
-  box-shadow: var(--shadow-2);
-  transition: all 200ms linear;
+.Toastify__toast--success {
+  border: 1px solid #3a9ea5 !important;
+  border-radius: 50px !important;
+  background: #f0f9fa !important;
 }
-
-.outer {
-  margin: 200px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.circular {
-  width: 13rem;
-  height: 13rem;
-  background: var(--backgroundElevatedColor);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  position: relative;
-}
-
-.middle-element {
+.Toastify__toast-body {
+  color: #444c63;
+  font-size: 16px;
+  padding-left: 20px;
+  line-height: 20px;
+  padding: 0px;
+  padding-top: 25px;
   width: 100%;
-  height: auto;
-  text-align: center;
-}
-
-.around-element:nth-child() {
-  padding: 1rem;
-  position: absolute;
-  background: var(--backgroundElevatedColor);
-  transform: translate(-125%) rotate(-90deg);
-  /* transform: rotate(-90deg) translateX(-100%); */
-  margin: 0;
-  /* clip-path: polygon(0 0, 100% 50%, 0 100%); */
+  font-weight: 400;
+  margin-left: 25px !important;
 }
 
 /*
@@ -891,6 +857,17 @@ Blogs Education
   margin: 1rem;
 }
 
+.blog-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+}
+.blog-link:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .blogs-education-section {
     flex-direction: row;
@@ -947,10 +924,12 @@ Contact Footer
   font-weight: 700;
 }
 
-.contact-container a {
+.contact-container a,
+.contact-container span {
   color: var(--textColor);
 }
-.contact-container a:hover {
+.contact-container a:hover,
+.contact-container span:hover {
   cursor: pointer;
   color: var(--primary-300);
 }

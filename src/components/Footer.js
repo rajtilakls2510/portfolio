@@ -1,56 +1,50 @@
 import React from "react";
+import contactDetails from "../contactDetails";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Footer = () => {
+  const { email, linkedin, github, facebook, medium } = contactDetails;
+
   return (
     <footer className="contact-footer" id="contact">
+      <ToastContainer />
       <div className="footer-container">
         <div className="contact-container">
           <h3>Contact:</h3>
           <div className="underline"></div>
           <p>
             Email:{" "}
-            <a href="#" rel="noopener noreferrer">
-              rajtilakls2510@gmail.com
-            </a>
+            <CopyToClipboard
+              text={email}
+              onCopy={() => toast.success("Email copied to clipboard")}
+            >
+              <span>{email}</span>
+            </CopyToClipboard>
           </p>
           <p>
             LinkedIn:{" "}
-            <a
-              href="https://www.linkedin.com/in/rajtilak-pal-5a78b7192/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://www.linkedin.com/in/rajtilak-pal-5a78b7192/
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              {linkedin}
             </a>
           </p>
           <p>
             Github:{" "}
-            <a
-              href="https://github.com/rajtilakls2510"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://github.com/rajtilakls2510
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              {github}
             </a>
           </p>
           <p>
             Facebook:{" "}
-            <a
-              href="https://www.facebook.com/rajtilak.pal.9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://www.facebook.com/rajtilak.pal.9
+            <a href={facebook} target="_blank" rel="noopener noreferrer">
+              {facebook}
             </a>
           </p>
           <p>
             Medium:{" "}
-            <a
-              href="https://medium.com/@rajtilakls2510"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://medium.com/@rajtilakls2510
+            <a href={medium} target="_blank" rel="noopener noreferrer">
+              {medium}
             </a>
           </p>
         </div>

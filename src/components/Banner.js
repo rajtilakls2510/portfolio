@@ -1,49 +1,40 @@
 import React from "react";
-import profileImg from "../images/profile_image.jpg";
+import details from "../profileDetails";
 
 const Banner = () => {
+  const { name, profile, about, words, strengths } = details;
+
   return (
     <section className="banner">
       <div className="primary-info-container">
         <div className="photo-column" id="home">
-          <img src={profileImg} alt="" className="profile-img" />
+          <img src={profile} alt="" className="profile-img" />
         </div>
         <div className="info-column">
-          <h1 className="name-text">Rajtilak Pal</h1>
+          <h1 className="name-text">{name}</h1>
 
           <h3>About Me</h3>
-          <p className="about-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus pariatur repudiandae temporibus facere nihil sunt
-            deserunt? Unde, facilis. Aliquid, inventore hic? Aliquid minus
-            deserunt dolorum nisi iure saepe adipisci cum?
-          </p>
+          <p className="about-text">{about}</p>
 
           <h3>Words that describe me: </h3>
           <div className="words-container">
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
+            {words.map((word, index) => {
+              return (
+                <p key={index} className="word">
+                  {word}
+                </p>
+              );
+            })}
           </div>
           <h3>Strengths: </h3>
           <div className="words-container">
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
-            <p className="word">lorem</p>
+            {strengths.map((strength, index) => {
+              return (
+                <p key={index} className="word">
+                  {strength}
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>

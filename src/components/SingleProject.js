@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import backgroundImg from "../images/banner_background.jpg";
 
-const SingleProject = ({ detailsLeft }) => {
+const SingleProject = ({ title, domains, desc, github, detailsLeft }) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const textAlignSide = detailsLeft ? "start" : "end";
   const translateInitial = detailsLeft
@@ -35,11 +35,15 @@ const SingleProject = ({ detailsLeft }) => {
         } ${translateInitial}`}
         ref={projectDetailsRef}
       >
-        <h2 className="project-title ">Project Title</h2>
+        <h2 className="project-title ">{title}</h2>
         <div className="words-container  project-domains ">
-          <p className="word">lorem</p>
-          <p className="word">lorem</p>
-          <p className="word">lorem</p>
+          {domains.map((domain, index) => {
+            return (
+              <p key={index} className="word">
+                {domain}
+              </p>
+            );
+          })}
         </div>
 
         <p
@@ -48,11 +52,14 @@ const SingleProject = ({ detailsLeft }) => {
             textAlign: textAlignSide,
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-          debitis tempora quaerat fugit corrupti explicabo exercitationem porro
-          quis ab veritatis!
+          {desc}
         </p>
-        <a href="#" className="btn  project-github-btn ">
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn  project-github-btn "
+        >
           Go to Github
         </a>
       </div>
