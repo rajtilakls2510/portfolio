@@ -17,7 +17,7 @@ const SingleProject = ({ detailsLeft }) => {
       // onMouseEnter={() => setIsDetailsOpen(true)}
       // onMouseLeave={() => setIsDetailsOpen(false)}
     >
-      <img src={backgroundImg} alt="Project Image" className="project-img" />
+      <img src={backgroundImg} alt="Project" className="project-img" />
       {isDetailsOpen && <div className="img-after"></div>}
       <h2
         className={`project-title ${translateInitial} ${
@@ -52,7 +52,7 @@ const SingleProject = ({ detailsLeft }) => {
         veritatis!
       </p>
       <a
-        href=""
+        href="#"
         className={`btn ${translateInitial} project-github-btn ${
           isDetailsOpen && "show-details"
         }`}

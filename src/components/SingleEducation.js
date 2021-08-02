@@ -19,7 +19,12 @@ const SingleEducation = ({
       <h5>{degreeCourse}</h5>
       <p>{desc}</p>
       <p>Email : {email}</p>
-      <a href={website} target="_blank" className="word">
+      <a
+        href={website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="word"
+      >
         Website
       </a>
       {prevBtnVisible && (

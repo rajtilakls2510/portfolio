@@ -8,26 +8,38 @@ const Footer = () => {
           <h3>Contact:</h3>
           <div className="underline"></div>
           <p>
-            Email: <a href="#">rajtilakls2510@gmail.com</a>
+            Email:{" "}
+            <a href="#" rel="noopener noreferrer">
+              rajtilakls2510@gmail.com
+            </a>
           </p>
           <p>
             LinkedIn:{" "}
             <a
               href="https://www.linkedin.com/in/rajtilak-pal-5a78b7192/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               https://www.linkedin.com/in/rajtilak-pal-5a78b7192/
             </a>
           </p>
           <p>
             Github:{" "}
-            <a href="https://github.com/rajtilakls2510" target="_blank">
+            <a
+              href="https://github.com/rajtilakls2510"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/rajtilakls2510
             </a>
           </p>
           <p>
             Facebook:{" "}
-            <a href="https://www.facebook.com/rajtilak.pal.9" target="_blank">
+            <a
+              href="https://www.facebook.com/rajtilak.pal.9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://www.facebook.com/rajtilak.pal.9
             </a>
           </p>

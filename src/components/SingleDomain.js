@@ -18,8 +18,12 @@ const SingleDomain = ({
       <p>{description}</p>
       <h4>Tools and Libraries used:</h4>
       <div className="words-container">
-        {libraries.map((library) => {
-          return <p className="word">{library}</p>;
+        {libraries.map((library, index) => {
+          return (
+            <p key={index} className="word">
+              {library}
+            </p>
+          );
         })}
       </div>
       <div className="level-top">

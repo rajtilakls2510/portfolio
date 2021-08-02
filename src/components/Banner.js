@@ -10,15 +10,16 @@ const Banner = () => {
         </div>
         <div className="info-column">
           <h1 className="name-text">Rajtilak Pal</h1>
+
+          <h3>About Me</h3>
           <p className="about-text">
-            <h4>About Me</h4>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Voluptatibus pariatur repudiandae temporibus facere nihil sunt
             deserunt? Unde, facilis. Aliquid, inventore hic? Aliquid minus
             deserunt dolorum nisi iure saepe adipisci cum?
           </p>
 
-          <h3 style={{ fontWeight: "700" }}>Words that describe me: </h3>
+          <h3>Words that describe me: </h3>
           <div className="words-container">
             <p className="word">lorem</p>
             <p className="word">lorem</p>
@@ -31,7 +32,7 @@ const Banner = () => {
             <p className="word">lorem</p>
             <p className="word">lorem</p>
           </div>
-          <h3 style={{ fontWeight: "700" }}>Strengths: </h3>
+          <h3>Strengths: </h3>
           <div className="words-container">
             <p className="word">lorem</p>
             <p className="word">lorem</p>
