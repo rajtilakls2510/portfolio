@@ -14,8 +14,8 @@ const SingleProject = ({ detailsLeft }) => {
     <div
       className="single-project"
       onClick={() => setIsDetailsOpen(!isDetailsOpen)}
-      onMouseEnter={() => setIsDetailsOpen(true)}
-      onMouseLeave={() => setIsDetailsOpen(false)}
+      // onMouseEnter={() => setIsDetailsOpen(true)}
+      // onMouseLeave={() => setIsDetailsOpen(false)}
     >
       <img src={backgroundImg} alt="Project Image" className="project-img" />
       {isDetailsOpen && <div className="img-after"></div>}

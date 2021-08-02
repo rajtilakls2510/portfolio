@@ -32,7 +32,7 @@ html {
   --grey-600: #475569;
   --grey-700: #334155;
   --grey-800: #1e293b;
-  --grey-900: #0f172a;
+  --grey-900: rgb(15, 23, 42);
 
   /* rest of the colors */
   --black: #222;
@@ -81,7 +81,6 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: var(--textColor);
-  overflow-x: hidden;
 }
 
 p {
@@ -121,7 +120,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 small,
@@ -553,6 +552,7 @@ Domains
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow-x: hidden;
 }
 
 .domain {
@@ -685,6 +685,7 @@ Projects
   gap: 1rem;
   box-shadow: var(--shadow-2);
   border-radius: 20px;
+  overflow-x: hidden;
 }
 
 .single-project {
@@ -694,7 +695,7 @@ Projects
 
 .project-img {
   display: block;
-  width: 80vw;
+  width: 90vw;
   height: 65vh;
   border: 2px solid var(--green);
   border-radius: 20px;
@@ -756,7 +757,7 @@ Projects
   }
   .project-img {
     width: 35vw;
-    height: 60vh;
+    height: auto;
   }
 }
 
@@ -767,7 +768,7 @@ Blogs Education
 */
 
 .blogs-education-section {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -790,7 +791,7 @@ Blogs Education
 }
 
 .blog-container {
-  width: 80vw;
+  width: 90vw;
   min-height: 50vh;
   display: flex;
   flex-direction: row;
@@ -833,7 +834,7 @@ Blogs Education
   color: var(--white);
 }
 .blog a:hover {
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-4);
 }
 
 .blog-img {
@@ -895,5 +896,95 @@ Blogs Education
   }
   .blog-img {
     width: 30vw;
+  }
+}
+
+/*
+=============== 
+Contact Footer
+===============
+*/
+
+.contact-footer {
+  margin-top: 5rem;
+  width: 100vw;
+  background: linear-gradient(
+      to right,
+      rgba(0, 16, 28, 0.4),
+      rgba(0, 16, 28, 0.4)
+    ),
+    url("images/footer.jpg") center/cover no-repeat;
+  border-top: 2px solid var(--green);
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+}
+.contact-container h3 {
+  margin: 0;
+}
+.contact-container p {
+  color: var(--green);
+  margin: 0;
+  font-weight: 700;
+}
+
+.contact-container a {
+  color: var(--textColor);
+}
+.contact-container a:hover {
+  cursor: pointer;
+  color: var(--primary-300);
+}
+
+.creation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+}
+.creation-container h4 {
+  margin: 0;
+  font-weight: 700;
+}
+.creation-container h3 {
+  margin: 0;
+}
+.creation-container p {
+  color: var(--textColor);
+  margin: 0;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-footer {
+    background: linear-gradient(
+        to right,
+        rgba(0, 16, 28, 0.7),
+        rgba(0, 16, 28, 0.1),
+        rgba(0, 16, 28, 0.7)
+      ),
+      url("images/footer.jpg") center/cover no-repeat;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .creation-container {
+    align-items: flex-end;
   }
 }

@@ -24,7 +24,7 @@ const Navbar = () => {
             duration={300}
             offset={-100}
             className="nav-link"
-            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Home
           </Link>
@@ -34,7 +34,7 @@ const Navbar = () => {
             duration={300}
             offset={-100}
             className="nav-link"
-            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Work
           </Link>
@@ -44,17 +44,20 @@ const Navbar = () => {
             duration={300}
             offset={-100}
             className="nav-link"
-            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Blog
           </Link>
-          <h4
-            href=""
+          <Link
+            to="contact"
+            smooth={true}
+            duration={300}
+            offset={-100}
             className="nav-link"
-            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Contact
-          </h4>
+          </Link>
         </div>
       </div>
     </nav>
