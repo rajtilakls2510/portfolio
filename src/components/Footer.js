@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="underline"></div>
           <h4>Created by: Rajtilak Pal</h4>
           <p>Date Created: 02/08/2021</p>
-          <p>Last Updated: 02/08/2021</p>
+          <p>Last Updated: 25/08/2021</p>
         </div>
       </div>
     </footer>

@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const [isNavDropdownOpen, setIsNavDropdownOpen] = useState(false);
+  const [navHeight, setNavHeight] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
 
+  useEffect(() => {
+    // console.log(document.querySelector(".nav-link"));
+    console.log(window);
+    if (window.innerWidth < 768) {
+      setNavHeight(
+        document.getElementById("nav").getBoundingClientRect().height
+      );
+      setContainerHeight(
+        document.querySelector(".nav-link").getBoundingClientRect().height * 4 +
+          20
+      );
+    } else {
+      setNavHeight(
+        document.getElementById("nav").getBoundingClientRect().height + 20
+      );
+      setContainerHeight(0);
+    }
+  }, [isNavDropdownOpen]);
+  console.log(navHeight, containerHeight);
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="nav">
       <div className="nav-center">
         <div className="nav-header">
           <h3>Rajtilak's Portfolio</h3>
@@ -17,14 +38,14 @@ const Navbar = () => {
             onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           />
         </div>
-        <div className={`nav-links ${isNavDropdownOpen && "show-links"}`}>
+        <div className={`nav-links ${isNavDropdownOpen ? "show-links" : ""}`}>
           <Link
             to="home"
             smooth={true}
             duration={300}
-            offset={-100}
+            offset={-1 * navHeight - containerHeight}
             className="nav-link"
-            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Home
           </Link>
@@ -32,9 +53,9 @@ const Navbar = () => {
             to="work"
             smooth={true}
             duration={300}
-            offset={-100}
+            offset={-1 * navHeight - containerHeight}
             className="nav-link"
-            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Work
           </Link>
@@ -42,9 +63,9 @@ const Navbar = () => {
             to="blog"
             smooth={true}
             duration={300}
-            offset={-100}
+            offset={-1 * navHeight - containerHeight}
             className="nav-link"
-            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Blog
           </Link>
@@ -52,9 +73,9 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={300}
-            offset={-100}
+            offset={-1 * navHeight - containerHeight}
             className="nav-link"
-            // onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Contact
           </Link>

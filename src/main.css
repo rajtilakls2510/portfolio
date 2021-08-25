@@ -384,7 +384,7 @@ Navbar
     width: auto;
     flex-direction: row;
     justify-content: flex-end;
-    height: auto;
+    height: auto !important;
     margin: 0 0.2rem 0 auto;
   }
   .nav-link {
