@@ -14,7 +14,7 @@ const Banner = () => {
           <h1 className="name-text">{name}</h1>
 
           <h3>About Me</h3>
-          <p className="about-text">{about}</p>
+          <p>{about}</p>
 
           <h3>Words that describe me: </h3>
           <div className="words-container">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
@@ -6,16 +6,15 @@ const Navbar = () => {
   const [isNavDropdownOpen, setIsNavDropdownOpen] = useState(false);
   const [navHeight, setNavHeight] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
+  const linksRef = useRef(null);
 
   useEffect(() => {
-    // console.log(document.querySelector(".nav-link"));
-    console.log(window);
     if (window.innerWidth < 768) {
       setNavHeight(
         document.getElementById("nav").getBoundingClientRect().height
       );
       setContainerHeight(
-        document.querySelector(".nav-link").getBoundingClientRect().height * 4 +
+        document.querySelector(".nav-link").getBoundingClientRect().height * 5 +
           20
       );
     } else {
@@ -25,7 +24,16 @@ const Navbar = () => {
       setContainerHeight(0);
     }
   }, [isNavDropdownOpen]);
-  console.log(navHeight, containerHeight);
+  useEffect(() => {
+    if (isNavDropdownOpen) {
+      const links = linksRef.current.querySelectorAll(".nav-link");
+      let height = `${
+        links[0].getBoundingClientRect().height * links.length
+      }px`;
+      linksRef.current.style.height = height;
+    } else linksRef.current.style.height = 0;
+  }, [isNavDropdownOpen]);
+
   return (
     <nav className="navbar" id="nav">
       <div className="nav-center">
@@ -38,7 +46,10 @@ const Navbar = () => {
             onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           />
         </div>
-        <div className={`nav-links ${isNavDropdownOpen ? "show-links" : ""}`}>
+        <div
+          className={`nav-links ${isNavDropdownOpen ? "show-links" : ""}`}
+          ref={linksRef}
+        >
           <Link
             to="home"
             smooth={true}
@@ -58,6 +69,16 @@ const Navbar = () => {
             onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
           >
             Work
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={300}
+            offset={-1 * navHeight - containerHeight}
+            className="nav-link"
+            onClick={() => setIsNavDropdownOpen(!isNavDropdownOpen)}
+          >
+            Projects
           </Link>
           <Link
             to="blog"

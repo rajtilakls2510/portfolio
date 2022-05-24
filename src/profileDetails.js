@@ -4,7 +4,7 @@ export default {
   name: "Rajtilak Pal",
   profile: profileImg,
   about:
-    "I am a Full-Stack Developer based of Kolkata, India, currently pursuing B.Tech. in CSE. I have worked on multiple domains based on Application Development, Web Development, Machine Learning and Deep Learning with varieties of languages, libraries and frameworks.",
+    "I am a Computer Science Engineer based of Kolkata, India, currently pursuing Bachelor in Technology in CSE. Interested in Artificial Intelligence, particularly Reinforcement Learning, my domains have been Software Engineering, Web Development and Machine Learning.",
   words: [
     "Enthusiastic",
     "Punctual",
@@ -13,5 +13,5 @@ export default {
     "Flexible",
     "Honest",
   ],
-  strengths: ["Quick Learner", "Focused", "Self-Control", "Dedication"],
+  strengths: ["Quick Learner", "Focused", "Management Skills", "Dedication"],
 };

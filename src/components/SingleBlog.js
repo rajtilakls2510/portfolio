@@ -15,9 +15,17 @@ const SingleBlog = ({
   return (
     <>
       <article className={`blog ${visibilityClass}`}>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <img src={img} alt="Blog" className="blog-img" />
         <p>{desc}</p>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="word"
+        >
+          Go to Blog
+        </a>
         {prevBtnVisible && (
           <div
             className="btn blog-change-btn blog-prev-btn"
@@ -35,12 +43,6 @@ const SingleBlog = ({
           </div>
         )}
       </article>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="blog-link"
-      />
     </>
   );
 };

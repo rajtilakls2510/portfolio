@@ -1,16 +1,23 @@
 export default [
   {
-    title: "Machine Learning (DL)",
+    title: "Artificial Intelligence",
     description:
-      "I have been engaged with AI/ML for a couple of years and it is one of the most facinating domains that I have worked on.",
-    libraries: ["Tensorflow", "Keras", "Scikit-Learn", "Pandas", "Numpy"],
-    level: { current: 3, outOf: 5 },
+      "Currently focused on Reinforcement Learning, I have also spent extensive time on Deep Learning and Machine Learning.",
+    libraries: [
+      "Tensorflow",
+      "Keras",
+      "Scikit-Learn",
+      "Pandas",
+      "Numpy",
+      "OpenCV",
+    ],
+    level: { current: 4, outOf: 5 },
   },
   {
     title: "Web Development",
     description:
-      "Building micro-services has been one of the most exciting things in my life. Currently, I am learning Spring Boot and ReactJS.",
-    libraries: ["Spring Boot", "ReactJS", "MySQL", "Flask", "CSS"],
+      "Building micro-services has been one of the most exciting things in my life when I worked as a Full Stack Developer.",
+    libraries: ["CSS", "ReactJS", "Spring Boot", "Flask", "MySQL"],
     level: { current: 3.5, outOf: 5 },
   },
   {

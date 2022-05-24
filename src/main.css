@@ -37,7 +37,7 @@ html {
   /* rest of the colors */
   --black: #222;
   --white: #fff;
-  --green: #128830;
+  --green: #0a8328;
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
@@ -122,6 +122,10 @@ small,
 .text-small {
   font-size: var(--smallText);
 }
+p{
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
 
 a {
   text-decoration: none;
@@ -152,9 +156,13 @@ ul {
   display: block;
 }
 .btn:hover {
+  background: var(--grey-200);
+  box-shadow: var(--shadow-3);
+}
+.btn:active{
   background: var(--primary-700);
-  box-shadow: var(--shadow-4);
   color: var(--grey-50);
+  box-shadow: var(--shadow-4);
 }
 .btn-hipster {
   color: var(--grey-50);
@@ -334,7 +342,6 @@ Navbar
 }
 
 .show-links {
-  height: 17rem;
   margin-top: 1rem;
 }
 
@@ -450,9 +457,6 @@ Banner
   font-size: 4.5rem;
 }
 
-.about-text {
-  font-size: 1.1rem;
-}
 
 .words-container {
   display: flex;
@@ -466,12 +470,7 @@ Banner
   background: var(--green);
   border-radius: var(--borderRadius);
   margin-right: 1rem;
-  box-shadow: var(--shadow-2);
   font-size: 1.1rem;
-}
-.word:hover {
-  cursor: pointer;
-  box-shadow: var(--shadow-4);
 }
 
 @media screen and (min-width: 910px) {
@@ -513,7 +512,7 @@ Domains
 }
 .domain-container {
   width: 90vw;
-  height: 85vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -523,18 +522,20 @@ Domains
 }
 
 .domain {
-  height: 100%;
-  position: absolute;
+  width:100%;
+  position:relative;
   top: 0;
   background: var(--backgroundElevatedColor);
   padding: 3rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   box-shadow: var(--shadow-3);
   transition: 0.3s ease all;
+  overflow-y: auto;
+  
 }
 
 .domain h2 {
@@ -551,6 +552,7 @@ Domains
 }
 
 .prev-domain {
+  position:absolute;
   opacity: 0;
   transform: translateX(-105%);
 }
@@ -561,6 +563,7 @@ Domains
 }
 
 .next-domain {
+  position:absolute;
   opacity: 0;
   transform: translateX(105%);
 }
@@ -597,7 +600,7 @@ Domains
 }
 
 .domain-change-btn:hover {
-  transform: scale(125%);
+  transform: scale(115%);
 }
 
 .domain-prev-btn {
@@ -615,7 +618,7 @@ Domains
 
 @media screen and (min-width: 768px) {
   .domain-container {
-    height: 50vh;
+    min-height: 30vh;
   }
   .domain {
     width: 70vw;
@@ -745,13 +748,12 @@ Blogs Education
 
 .blogs-education-section {
   width: 100vw;
-  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .blogs-container {
@@ -769,12 +771,12 @@ Blogs Education
 
 .blog-container {
   width: 90vw;
-  min-height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .blog {
@@ -792,6 +794,8 @@ Blogs Education
   padding-top: 1.5rem;
   position: relative;
   top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .blog h2,
@@ -809,6 +813,7 @@ Blogs Education
 
 .blog a {
   color: var(--white);
+    box-shadow: var(--shadow-2);
 }
 .blog a:hover {
   box-shadow: var(--shadow-4);

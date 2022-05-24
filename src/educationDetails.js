@@ -2,7 +2,7 @@ export default [
   {
     instituteName: "Techno Main Salt Lake",
     degreeCourse: "B.Tech. CSE",
-    desc: "Currently studying in the 3rd Year of this 4 year degree programme under Makaut University.",
+    desc: "Currently studying in the Final Year of this 4 year degree programme under Makaut University.",
     email: "info@ticollege.ac.in",
     website: "https://www.ticollege.ac.in/",
   },
