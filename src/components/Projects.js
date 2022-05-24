@@ -10,13 +10,7 @@ const Projects = () => {
 
       <div className="project-container">
         {projectDetails.map((project, index) => {
-          return (
-            <SingleProject
-              key={index}
-              {...project}
-              detailsLeft={index % 2 === 0}
-            />
-          );
+          return <SingleProject key={index} {...project} />;
         })}
       </div>
     </section>

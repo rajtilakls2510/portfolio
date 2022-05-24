@@ -15,7 +15,7 @@ const SingleBlog = ({
   return (
     <>
       <article className={`blog ${visibilityClass}`}>
-        <h3>{title}</h3>
+        <h4>{title}</h4>
         <img src={img} alt="Blog" className="blog-img" />
         <p>{desc}</p>
         <a

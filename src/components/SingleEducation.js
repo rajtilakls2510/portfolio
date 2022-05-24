@@ -15,7 +15,7 @@ const SingleEducation = ({
 }) => {
   return (
     <article className={`blog ${visibilityClass}`}>
-      <h2>{instituteName}</h2>
+      <h3>{instituteName}</h3>
       <h5>{degreeCourse}</h5>
       <p>{desc}</p>
       <p>Email : {email}</p>

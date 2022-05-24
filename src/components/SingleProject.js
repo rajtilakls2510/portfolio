@@ -1,71 +1,38 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import { FaRegClock } from "react-icons/fa";
 
-const SingleProject = ({ title, domains, desc, img, github, detailsLeft }) => {
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const textAlignSide = detailsLeft ? "start" : "end";
-  const translateInitial = detailsLeft
-    ? "project-details-left"
-    : "project-details-right";
-
-  const projectDetailsRef = useRef(null);
-  const projectImgRef = useRef(null);
-  useEffect(() => {
-    const detailsHeight =
-      projectDetailsRef.current.getBoundingClientRect().height;
-    projectImgRef.current.style.height = `${detailsHeight}px`;
-  }, [isDetailsOpen]);
+const SingleProject = ({ title, domains, desc, img, github, date }) => {
+  const [isDescOpen, setIsDescOpen] = useState(false);
 
   return (
-    <div
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
       className="single-project"
-      onClick={() => setIsDetailsOpen(!isDetailsOpen)}
-      // onMouseEnter={() => setIsDetailsOpen(true)}
-      // onMouseLeave={() => setIsDetailsOpen(false)}
+      onMouseEnter={() => setIsDescOpen(true)}
+      onMouseLeave={() => setIsDescOpen(false)}
     >
-      <img
-        src={img}
-        alt="Project"
-        className="project-img"
-        ref={projectImgRef}
-      />
-      <div
-        className={`project-details ${isDetailsOpen ? "show-details" : ""} ${
-          detailsLeft ? "project-align-left" : "project-align-right"
-        } ${translateInitial}`}
-        ref={projectDetailsRef}
-      >
-        <h2 className="project-title ">{title}</h2>
-        <div className="words-container  project-domains ">
-          {domains.map((domain, index) => {
-            return (
-              <p key={index} className="word">
-                {domain}
-              </p>
-            );
-          })}
+      <div className="project-preview">
+        <img src={img} alt={title} className="project-img" />
+        <div className="project-details">
+          <h4>{title}</h4>
+          <div className="words-container">
+            {domains.map((domain, index) => {
+              return (
+                <p key={index} className="word">
+                  {domain}
+                </p>
+              );
+            })}
+          </div>
+          <div className="project-time">
+            <FaRegClock /> {date}
+          </div>
         </div>
-
-        <p
-          className=" project-desc "
-          style={{
-            textAlign: textAlignSide,
-          }}
-        >
-          {desc}
-        </p>
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn  project-github-btn "
-        >
-          Go to Github
-        </a>
       </div>
-      <p className="project-helper">
-        Click to {isDetailsOpen ? "close" : "see"} Project Details
-      </p>
-    </div>
+      {isDescOpen && <p>{desc}</p>}
+    </a>
   );
 };
 
