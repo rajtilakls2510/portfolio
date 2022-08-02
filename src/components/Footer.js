@@ -49,11 +49,11 @@ const Footer = () => {
           </p>
         </div>
         <div className="creation-container">
-          <h3>Creation: </h3>
+          <h3>Website Details: </h3>
           <div className="underline"></div>
           <h4>Created by: Rajtilak Pal</h4>
           <p>Date Created: 02/08/2021</p>
-          <p>Last Updated: 24/05/2022</p>
+          <p>Last Updated: 02/08/2022</p>
         </div>
       </div>
     </footer>

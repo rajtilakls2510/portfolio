@@ -4,7 +4,7 @@ export default {
   name: "Rajtilak Pal",
   profile: profileImg,
   about:
-    "I am a Computer Science Engineer based of Kolkata, India, currently pursuing Bachelor in Technology in CSE. Interested in Artificial Intelligence, particularly Reinforcement Learning, my domains have been Software Engineering, Web Development and Machine Learning.",
+    "I am an Artificial Intelligence Enthusiast currently pursuing M. Tech. in Artificial Intelligence at IIT Ropar, India. Interested in Machine Learning, Deep Learning and Reinforcement Learning, my domains have also been Software Engineering, Web Development and Android Development in the past.",
   words: [
     "Enthusiastic",
     "Punctual",

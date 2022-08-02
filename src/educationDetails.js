@@ -1,8 +1,15 @@
 export default [
   {
+    instituteName: "IIT Ropar",
+    degreeCourse: "M.Tech. AI",
+    desc: "Currently enrolled in the 1st Semester of this Masters' Degree.",
+    email: "offhss@iitrpr.ac.in",
+    website: "https://www.iitrpr.ac.in/",
+  },
+  {
     instituteName: "Techno Main Salt Lake",
     degreeCourse: "B.Tech. CSE",
-    desc: "Currently studying in the Final Year of this 4 year degree programme under Makaut University.",
+    desc: "Completed this Bachelors' Degree under Makaut University with a CGPA of 9.5.",
     email: "info@ticollege.ac.in",
     website: "https://www.ticollege.ac.in/",
   },
